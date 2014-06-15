@@ -1,10 +1,9 @@
-fruitware-gulp
+Fruitware gulp
 ==============
 
 Fruitware gulp starting file
 
 ## Getting started
-==============
 
 1. copy the files from the repo into *markup* folder in your project.
 1. run `npm install` in markup folder
