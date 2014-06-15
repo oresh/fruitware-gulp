@@ -148,7 +148,7 @@ gulp.task('sprite', function () {
 
 gulp.task('structure', function() {
   gulp.src(['files'])
-    .pipe(add('index.haml', '/* Main page haml file. */'))
+    .pipe(add('index.haml', 'Hello world!'))
     .pipe(gulp.dest('./haml'));
   gulp.src(['files'])
     .pipe(add('scripts.js', '/* Main scripts file. */'))

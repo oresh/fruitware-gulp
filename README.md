@@ -15,6 +15,8 @@ Every time you stop gulp and continue working later on, just run `gulp`.
 
 ## Localhost and Livereload
 
-After running gulp, you can access your site at `localhost:4000/`.
+After running gulp, you can access your site at [localhost:4000/](http://localhost:4000/).
+
 Live reload is already running on this port, but you need to enable it with browser extension.
+
 You can download [chrome extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) or [firefox extension](https://addons.mozilla.org/en/firefox/addon/livereload/), and enable it on the working page by clicking the extension icon in toolbar.
