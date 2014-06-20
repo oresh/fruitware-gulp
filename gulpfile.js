@@ -13,7 +13,8 @@ var gulp = require('gulp'); // gulp core
   haml = require('gulp-haml'), // haml support
   prettify = require('gulp-prettify'), // prettify spaces and tabs
   add = require('gulp-add'), // add folders and files
-  spritesmith = require('gulp.spritesmith'); // generate sprite
+  spritesmith = require('gulp.spritesmith'), // generate sprite
+  image = require('gulp-image');
 
 // The server will be available at http://localhost:4000
 // In that path you'll see files that are in buid/ directory
@@ -60,10 +61,15 @@ function notifyLivereload(event) {
 var main = {
   haml_src: 'haml/**/*.haml',
   haml_html_src: 'haml/html/',
+  image_src: [ // all image files
+    'images/*.jpg',
+    'images/*.png',
+    'images/*.gif'
+  ],
   css_src: 'css/*.css', // all stylus files
   css_dest: 'build/css/', // where to put minified css
   js_uglify_src: [ // all js files that should not be concatinated
-    'js/libraries/*/*.js'
+    'js/libraries/*/**/*.js'
   ],
   js_concat_src: [ // all js files that should be concatinated
     'js/*.js'
@@ -90,10 +96,7 @@ gulp.task('css', function() {
 gulp.task('js-uglify', function() {
   gulp.src(main.js_uglify_src) // get the files
   .pipe(uglify()) // uglify the files
-//  .pipe(rename(function(dir, base, ext) { // give the files a min suffix
-//    var trunc = base.split('.')[0];
-//    return trunc + '.min' + ext;
-//  }))
+  .pipe(rename({dirname: "", suffix: ".min"}))
     .pipe(gulp.dest(main.js_dest)) // where to put the files
 });
 
@@ -125,7 +128,7 @@ gulp.task('hamlify_main', function() {
 });
 
 /*******************************************************************************
-7. GENERATE SPRITE
+7. GENERATE IMAGES AND SPRITE
 *******************************************************************************/
 
 gulp.task('sprite', function () {
@@ -142,13 +145,19 @@ gulp.task('sprite', function () {
   spriteData.css.pipe(gulp.dest('css/'));
 });
 
+gulp.task('image', function () {
+  gulp.src(main.image_src)
+    .pipe(image())
+    .pipe(gulp.dest('build/images'));
+});
+
 /*******************************************************************************
 8. GENERATE FILE STRUCTURE
 *******************************************************************************/
 
 gulp.task('structure', function() {
   gulp.src(['files'])
-    .pipe(add('index.haml', 'Hello world!'))
+    .pipe(add('index.haml', '%div Hello world!'))
     .pipe(gulp.dest('./haml'));
   gulp.src(['files'])
     .pipe(add('scripts.js', '/* Main scripts file. */'))
@@ -206,12 +215,17 @@ gulp.task('default', function() {
   gulp.watch('images/sprite/*.png', function(event) {
     gulp.run('sprite');
   });
+  // compress all images and save on change
+  gulp.watch(main.image_src, function(event) {
+    gulp.run('image');
+  });
 
 });
 
 gulp.task('generate', function() {
   // on gulp start, run these tasks
   gulp.run('sprite');
+  gulp.run('image');
   gulp.run('css');
   gulp.run('hamlify');
   gulp.run('js-uglify');

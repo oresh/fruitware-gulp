@@ -38,7 +38,8 @@
     "connect-livereload": "~0.4.0",
     "gulp-add": "0.0.1",
     "gulp-if": "~1.2.1",
-    "gulp.spritesmith": "~1.1.0"
+    "gulp.spritesmith": "~1.1.0",
+    "gulp-image": "~0.4.1"
   },
   "author": "mi",
   "license": "BSD"
