@@ -7,7 +7,8 @@ var gulp = require('gulp'); // gulp core
   jshint = require('gulp-jshint'), // check if js is ok
   rename = require("gulp-rename"), // rename files
   concat = require('gulp-concat'), // concatinate js
-  gfi = require("gulp-file-insert"),
+  gfi = require("gulp-file-insert"), // file insert
+  stylus = require('gulp-stylus'),
   plumber = require('gulp-plumber'), // disable interuption
   minifycss = require('gulp-minify-css'), // minify the css files
   haml = require('gulp-haml'), // haml support
@@ -66,7 +67,8 @@ var main = {
     'images/*.png',
     'images/*.gif'
   ],
-  css_src: 'css/*.css', // all stylus files
+  styles_src: 'stylus/**/*.styl', // all stylus files
+  css_src: 'css/*.css', // all css files
   css_dest: 'build/css/', // where to put minified css
   js_uglify_src: [ // all js files that should not be concatinated
     'js/libraries/*/**/*.js'
@@ -80,6 +82,11 @@ var main = {
 /*******************************************************************************
 4. STYLUS TASK
 *******************************************************************************/
+gulp.task('stylus', function () {
+  gulp.src(main.styles_src)
+    .pipe(stylus())
+    .pipe(gulp.dest(main.css_dest));
+});
 
 gulp.task('css', function() {
   gulp.src(main.css_src)
