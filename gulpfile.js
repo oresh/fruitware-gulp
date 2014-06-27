@@ -201,9 +201,13 @@ gulp.task('default', function() {
     gulp.run('css');
     notifyLivereload(event);
   });
+  // compily stylus on save
+  gulp.watch(main.styles_src, function(event) {
+    gulp.run('stylus');
+  });
   // complile html on haml change
-  gulp.watch('haml/*.haml', function(event) {
-    gulp.run('hamlify_main');
+  gulp.watch(main.haml_src, function(event) {
+    gulp.run('hamlify');
     notifyLivereload(event);
   });
   // run js uglify when minified js is changed
@@ -233,6 +237,7 @@ gulp.task('generate', function() {
   // on gulp start, run these tasks
   gulp.run('sprite');
   gulp.run('image');
+  gulp.run('stylus');
   gulp.run('css');
   gulp.run('hamlify');
   gulp.run('js-uglify');
