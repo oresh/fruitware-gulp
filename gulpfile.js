@@ -85,7 +85,7 @@ var main = {
 gulp.task('stylus', function () {
   gulp.src(main.styles_src)
     .pipe(stylus())
-    .pipe(gulp.dest(main.css_dest));
+    .pipe(gulp.dest('css/'));
 });
 
 gulp.task('css', function() {
@@ -181,6 +181,9 @@ gulp.task('structure', function() {
   gulp.src(['files'])
     .pipe(add('main.scss', '/* Main Sass file. */'))
     .pipe(gulp.dest('./sass'));
+  gulp.src(['files'])
+    .pipe(add('main.styl', '/* Main Stylus file. */'))
+    .pipe(gulp.dest('./stylus'));
   gulp.src(['files'])
     .pipe(add('main.css', '/* Generated sass file. */'))
     .pipe(gulp.dest('./css'));
