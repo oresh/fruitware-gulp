@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+%html
+   %head
+      %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      %meta(charset="utf-8")
+      %meta(name="viewport" content="width=device-width, initial-scale=1")
+      %link(href="css/sprite.min.css" rel="stylesheet")
+      %link(href="css/bootstrap.min.css" rel="stylesheet")
+      %link(href="css/main.min.css" rel="stylesheet")
+      %link(href="css/font-awesome.min.css" rel="stylesheet")
+      %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+      -# %script(src="js/libraries/owl.carousel.min.js")
+      -# %script(src="js/libraries/imagesloaded.min.js")
+      -# %script(src="js/libraries/jquery-imagefill.js")
+      %script(src="js/scripts.min.js")
+      %title MTG
+
+   %body
+      .container
+
+         <!--BREADCRUMBS-->
+
+         %h3 Breadcrumbs
+         %ol.breadcrumb.fw-no-background
+            %li
+               %a(href="#") Home
+            %li
+               %a(href="#") Level 1
+            %li.active
+               %span Level current
+
+
+         <!--BUTTONS-->
+
+         %h3 Buttons
+         .row
+            %button.btn.btn-default(type="button") default bootstrap
+            %button.btn.fw-btn-custom-color(type="button") custom color, font-size-base
+            %button.btn.btn-xs(type="button") extra-small
+            %button.btn.btn-sm(type="button") small
+            %button.btn.btn-lg(type="button") large
+            %button.btn.text-uppercase(type="button") large uppercase
+            %button.btn.btn-block.fw-margin-top.fw-margin-bottom(type="button") block 100% with margin
+            %button.btn.col-md-4.col-md-offset-4(type="button") middle with offset
+
+
+         <!--NAV-->
+
+         %h3 Menu
+
+         <!--NAV HORIZONTAL-->
+
+         %h4 Menu horizontal
+
+         <!--one level NAV-->
+
+         %h5 One level menu
+         %ul.menu.menu-horizontal.menu--name.well
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 2
+            %li.menu-item.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--several levels NAV-->
+
+         %h5 Several levels menu
+         %ul.menu.menu-horizontal.menu--name.well
+            %li.menu-item.depth-1
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item.depth-1.menu-item-parent
+               %a.menu-link(href="#") Menu item 2
+               %ul.menu.menu-sub
+                  %li.menu-item.depth-2
+                     %a.menu-link(href="#") Menu item 2-1
+                  %li.menu-item.depth-2
+                     %a.menu-link(href="#") Menu item 2-2
+            %li.menu-item.depth-1.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--NAV with header and divider-->
+
+         %h5 Menu with header and divider
+         %ul.menu.menu-horizontal.menu--name.well
+            %li.menu-header header of menu
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 2
+            %li.menu-divider
+            %li.menu-item.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--NAV with icon-->
+
+         %h5 Menu with icon
+         %ul.menu.menu-horizontal.menu--name.well
+            %li.menu-item
+               %a.menu-link(href="#")
+                  %span.fa.fa-fire-extinguisher
+                  Menu item 1 FAWESOME
+            %li.menu-item
+               %a.menu-link(href="#")
+                  %span.glyphicon.glyphicon-envelope
+                  Menu item 2 GLYPHICON
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 3 No icon
+            %li.menu-item.depth-1.active-trail
+               %a.menu-link.active(href="#") Menu item 4 active
+
+         <!--NAV VERTICAL-->
+
+         %h4 Menu vertical
+
+         <!--one level NAV-->
+
+         %h5 One level menu
+         %ul.menu.menu--name.well
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 2
+            %li.menu-item.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--several levels NAV-->
+
+         %h5 Several levels menu
+         %ul.menu.menu--name.well
+            %li.menu-item.depth-1
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item.depth-1.menu-item-parent
+               %a.menu-link(href="#") Menu item 2
+               %ul.menu.menu-sub
+                  %li.menu-item.depth-2
+                     %a.menu-link(href="#") Menu item 2-1
+                  %li.menu-item.depth-2
+                     %a.menu-link(href="#") Menu item 2-2
+            %li.menu-item.depth-1.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--NAV with header and divider-->
+
+         %h5 Menu with header and divider
+         %ul.menu.menu--name.well
+            %li.menu-header header of menu
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 1
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 2
+            %li.menu-divider
+            %li.menu-item.active-trail
+               %a.menu-link.active(href="#") Menu item 3 active
+
+         <!--NAV with icon-->
+
+         %h5 Menu with icon
+         %ul.menu.menu--name.well
+            %li.menu-item
+               %a.menu-link(href="#")
+                  %span.fa.fa-fire-extinguisher
+                  Menu item 1 FAWESOME
+            %li.menu-item
+               %a.menu-link(href="#")
+                  %span.glyphicon.glyphicon-envelope
+                  Menu item 2 GLYPHICON
+            %li.menu-item
+               %a.menu-link(href="#") Menu item 3 No icon
+            %li.menu-item.depth-1.active-trail
+               %a.menu-link.active(href="#") Menu item 4 active
+
+         <!--PANEL-->
+
+         %h3 Panel
+         .fw-panel.fw-border
+            .fw-panel-header
+               %img(src="http://placehold.it/200x50/31b0d5/ffffff")
+            .fw-panel-title
+               %h3 Title H3
+            .fw-panel-divider
+            .fw-panel-content
+               %p.lead Leading paragraph
+               %p Simple text
+               %p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            .fw-panel-footer
+               %p Some information in footer
+
+         <!--ARTICLE-->
+
+         %h3 Article
+         .fw-article.fw-border
+            %h1.fw-article-title Title H1
+            %h2.fw-article-title Title H2
+            %h3.fw-article-title Title H3
+            %h4.fw-article-title Title H4
+            %h5.fw-article-title Title H5
+            %h6.fw-article-title Title H6
+            %p.fw-article-meta
+            %p.fw-article-lead This is lead paragraph. This is lead paragraph. This is lead paragraph. This is lead paragraph. This is lead paragraph.
+            %p This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph. This is simple paragraph.
+            %p.text-center This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph. This is centered paragraph.
+            %p.text-right This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph. This is right-aligned paragraph.
+            %p.text-justify This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph. This is justify-aligned paragraph.
+            %p.text-uppercase This is uppercase paragraph. This is uppercase paragraph. This is uppercase paragraph. This is uppercase paragraph.
+            %p.text-lowercase This is lowercase paragraph. This is lowercase paragraph. This is lowercase paragraph. This is lowercase paragraph.
+            %p.text-capitalize This is capitalize paragraph. This is capitalize paragraph. This is capitalize paragraph. This is capitalize paragraph.
+            %p.text-nowrap This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph. This is nowrap paragraph.
+            %blockquote
+               %p This is bootstrap blockquote.
+            %blockquote
+               %p This is bootstrap blockquote with footer.
+               %footer This is footer for blockquote
+            %blockquote.blockquote-reverse
+               %p This is bootstrap blockquote with footer.
+               %footer This is footer for blockquote
+            .fw-article-divider
+
+         <!--TABLE-->
+
+         %h3 Table
+
+         <!--Simple TABLE-->
+
+         %h4 Simple Table
+         %table.table
+            %thead
+               %tr
+                  %th Nr
+                  %th name
+                  %th descr
+                  %th descr
+                  %th descr
+            %tbody
+               %tr
+                  %td 1
+                  %td Helena
+                  %td Helena
+                  %td Helena
+                  %td Helena
+               %tr
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Helena
+         <!--TABLE with different classes-->
+
+         %h4 Table with different classes
+         %table.table.table-hover.table-bordered.table-condensed.table-striped
+            %thead
+               %tr
+                  %th Nr
+                  %th.text-uppercase name
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+            %tbody
+               %tr
+                  %td 1
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td Helena
+               %tr
+                  %td.active Helena active
+                  %td Very beautiful
+                  %td.fw-background Very beautiful
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Helena
+               %tr
+                  %td Helenaa
+                  %td Helenaa
+                  %td Helenaa
+                  %td.success Helena success
+                  %td.success Helena success
+                  %td Very beautiful
+               %tr
+                  %td.info 1 info
+                  %td Helena
+                  %td Helena
+                  %td Helena
+                  %td Helena
+                  %td.warning Helena warning
+
+         <!--FORM-->
+
+         %h3 Form
+
+         <!--Basic FORM-->
+
+         %h4 Basic Form
+         %form.form.well
+            .form-group
+               %label(for="name1") This is label 1
+               %input.form-control(type="type" id="name1" placeholder="Placeholder1")
+            .form-group
+               %label(for="name2") This is label 2
+               %input.form-control.input-lg(type="type" id="name2" placeholder="This is large input")
+            .form-group
+               %label(for="name3") This is label 3
+               %input.form-control.input-sm(type="type" id="name3" placeholder="This is small input")
+            .form-group
+               %label This is textarea
+               %textarea.form-control(placeholder="Placeholder3")
+            .form-group
+               %label(for="name4") This is select
+               %select.form-control
+                  %option 1
+                  %option 2
+                  %option 3
+                  %option 4
+            .checkbox
+               %label
+                  %input(type="checkbox")
+                  Check me
+            %button.btn.btn-default Submit
+
+         <!--FORM inline-->
+
+         %h4 Inline Form
+         %form.form-inline.well
+            .form-group
+               %label.sr-only(for="name1") This is label 1
+               %input.form-control(type="type" id="name1" placeholder="Placeholder1")
+            .form-group
+               %label.sr-only(for="name2") This is label 2
+               %input.form-control(type="type" id="name2" placeholder="Placeholder2")
+            .checkbox
+               %label
+                  %input(type="checkbox")
+                  Check me
+            %button.btn.btn-default Submit
+
+         <!--Horizontal FORM-->
+
+         %h4 Horizontal Form
+         %form.form-horizontal.well
+            .form-group
+               %label.col-sm-3.control-label(for="name1") This is label 1
+               .col-sm-9
+                  %input.form-control(type="type" id="name1" placeholder="Placeholder1")
+            .form-group
+               %label.col-sm-3.control-label(for="name2") This is label 2
+               .col-sm-9
+                  %input.form-control(type="type" id="name2" placeholder="Placeholder2")
+            .form-group
+               %label.col-sm-3.control-label This is textarea
+               .col-sm-9
+                  %textarea.form-control(placeholder="Placeholder3")
+            .form-group
+               .col-sm-offset-3.col-sm-10
+                  .checkbox
+                     %label
+                        %input(type="checkbox")
+                        Check me
+            .form-group
+               .col-sm-offset-3.col-sm-10
+                  .checkbox
+                     %label.checkbox-inline
+                        %input(type="checkbox" id="" value="")
+                        1
+                     %label.checkbox-inline
+                        %input(type="checkbox" id="" value="")
+                        2
+                     %label.checkbox-inline
+                        %input(type="checkbox" id="" value="")
+                        3
+            .form-group
+               .col-sm-offset-3.col-sm-10
+                  %button.btn.btn-default Submit
+
+         <!--PAGINATION-->
+
+         %h3 Pagination
+         %ul.pagination
+            %li.disabled
+               %a(href="#")
+                  %span &laquo;
+            %li.active
+               %a(href="#")
+                  1
+                  %span.sr-only (current)
+            %li
+               %a(href="#")
+                  2
+            %li
+               %a(href="#")
+                  3
+            %li
+               %a(href="#")
+                  %span &raquo;
+         %ul.pagination.pagination-lg
+            %li.disabled
+               %a(href="#")
+                  %span &laquo;
+            %li.active
+               %a(href="#")
+                  1
+                  %span.sr-only (current)
+            %li
+               %a(href="#")
+                  2
+            %li
+               %a(href="#")
+                  3
+            %li
+               %a(href="#")
+                  %span &raquo;
+         %ul.pagination.pagination-sm
+            %li.disabled
+               %a(href="#")
+                  %span &laquo;
+            %li.active
+               %a(href="#")
+                  1
+                  %span.sr-only (current)
+            %li
+               %a(href="#")
+                  2
+            %li
+               %a(href="#")
+                  3
+            %li
+               %a(href="#")
+                  %span &raquo;
+
+         <!--PAGER-->
+
+         %h3 Pager
+         %ul.fw-pager
+            %li
+            %li
+            %li
+
+         <!--THUMBNAIL-->
+
+         %h3 Thumbnail list
+         %ul.fw-thumbnail.list-unstyled
+            %li.fw-thumbnail-item.col-sm-3.fw-border.fw-no-padding
+               .fw-thumbnail-image
+                  %img(src="http://placehold.it/100x200/31b0d5/ffffff")
+               .fw-thumbnail-info
+                  .fw-thumbnail-title
+                     %h4 Title h4
+                  %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            %li.fw-thumbnail-item.col-sm-3.fw-border.fw-no-padding
+               .fw-thumbnail-image
+                  %img(src="http://placehold.it/100x200/31b0d5/ffffff")
+               .fw-thumbnail-info
+                  .fw-thumbnail-title
+                     %h4 Title h4
+                  %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            %li.fw-thumbnail-item.col-sm-3.fw-border.fw-no-padding
+               .fw-thumbnail-image
+                  %img(src="http://placehold.it/100x200/31b0d5/ffffff")
+               .fw-thumbnail-info
+                  .fw-thumbnail-title
+                     %h4 Title h4
+                  %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+
+
+
+
+
+

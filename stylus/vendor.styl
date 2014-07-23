@@ -1,0 +1,36 @@
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  -o-{prop} args
+  {prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+border-top-right-radius()
+  vendor('border-top-right-radius', arguments)
+border-top-left-radius()
+  vendor('border-top-left-radius', arguments)
+border-bottom-right-radius()
+  vendor('border-bottom-right-radius', arguments)
+border-bottom-left-radius()
+  vendor('border-bottom-left-radius', arguments)
+
+box-shadow()
+	vendor('box-shadow', arguments, only: webkit official)
+
+box-sizing()
+  vendor('box-sizing', arguments, only: webkit moz official)
+
+transition()
+	vendor('transition', arguments)
+
+transform()
+	vendor('transform', arguments)
+
+transform-origin()
+	vendor('transform-origin', arguments)
+
+user-select()
+	vendor('user-select', arguments)

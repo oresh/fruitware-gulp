@@ -1,0 +1,293 @@
+/* Main Stylus file. */
+@import 'variables'
+@import 'vendor'
+
+.fw-text-top
+	vertical-align: top !important
+
+.fw-text-middle
+	vertical-align: middle !important
+
+.fw-text-bottom
+	vertical-align: bottom !important
+
+.fw-margin
+	margin fw-margin
+	&-top
+		margin-top fw-margin
+	&-bottom
+		margin-bottom fw-margin
+	&-left
+		margin-left fw-margin
+	&-right
+		margin-right fw-margin
+
+.fw-margin-small
+	margin fw-margin-small
+	&-top
+		margin-top fw-margin-small
+	&-bottom
+		margin-bottom fw-margin-small
+	&-left
+		margin-left fw-margin-small
+	&-right
+		margin-right fw-margin-small
+
+.fw-margin-large
+	margin fw-margin-large
+	&-top
+		margin-top fw-margin-large
+	&-bottom
+		margin-bottom fw-margin-large
+	&-left
+		margin-left fw-margin-large
+	&-right
+		margin-right fw-margin-large
+
+.fw-margin-remove
+	margin 0 !important
+	&-top
+		margin-top 0 !important
+	&-bottom
+		margin-bottom 0 !important
+	&-left
+		margin-left 0 !important
+	&-right
+		margin-right 0 !important
+
+[class*=fw-img-align-]
+	display: block
+	margin-bottom fw-margin
+
+[class*=fw-img-align-small]
+	margin-bottom fw-margin-small
+
+[class*=fw-img-align-large]
+	margin-bottom fw-margin-large
+
+.fw-img-align
+	&-left
+		float left
+		margin-right fw-margin
+	&-right
+		float right
+		margin-right fw-margin
+	&-center
+		margin-left auto
+		margin-right auto
+
+@media (min-width: 768px)
+	.fw-img-align
+		&-md-left
+			float left
+			margin-right fw-margin
+		&-md-right
+			float right
+			margin-right fw-margin
+
+.fw-img-align-small
+	&-left
+		float left
+		margin-right fw-margin-small
+	&-right
+		float right
+		margin-right fw-margin-small
+
+.fw-img-align-large
+	&-left
+		float left
+		margin-right fw-margin-large
+	&-right
+		float right
+		margin-right fw-margin-large
+
+.fw-vertical-align
+	font-size 0
+	&:before
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	&-middle
+	&-bottom
+		display: inline-block;
+		max-width: 100%;
+		font-size: fw-font-size-base
+	&-middle
+		vertical-align: middle
+	&-bottom
+		vertical-align: bottom
+
+.fw-rounded
+	border-radius fw-border-radius
+	&-right
+		border-top-right-radius fw-border-radius
+		border-bottom-right-radius fw-border-radius
+	&-left
+		border-top-left-radius fw-border-radius
+		border-bottom-left-radius fw-border-radius
+	&-bottom
+		border-bottom-right-radius fw-border-radius
+		border-bottom-left-radius fw-border-radius
+	&-top
+		border-top-right-radius fw-border-radius
+		border-top-left-radius fw-border-radius
+
+.fw-rounded-small
+	border-radius fw-border-radius-small
+	&-right
+		border-top-right-radius fw-border-radius-small
+		border-bottom-right-radius fw-border-radius-small
+	&-left
+		border-top-left-radius fw-border-radius-small
+		border-bottom-left-radius fw-border-radius-small
+	&-bottom
+		border-bottom-right-radius fw-border-radius-small
+		border-bottom-left-radius fw-border-radius-small
+	&-top
+		border-top-right-radius fw-border-radius-small
+		border-top-left-radius fw-border-radius-small
+
+.fw-rounded-large
+	border-radius fw-border-radius-large
+	&-right
+		border-top-right-radius fw-border-radius-large
+		border-bottom-right-radius fw-border-radius-large
+	&-left
+		border-top-left-radius fw-border-radius-large
+		border-bottom-left-radius fw-border-radius-large
+	&-bottom
+		border-bottom-right-radius fw-border-radius-large
+		border-bottom-left-radius fw-border-radius-large
+	&-top
+		border-top-right-radius fw-border-radius-large
+		border-top-left-radius fw-border-radius-large
+
+.fw-no-border-radius
+	border-radius 0 !important
+
+.fw-no-background
+	background transparent
+
+.fw-no-padding
+	padding 0 !important
+
+.fw-border
+	border 1px solid fw-border-color-base
+	&-top
+		border-top 1px solid fw-border-color-base
+	&-bottom
+		border-bottom 1px solid fw-border-color-base
+	&-left
+		border-left 1px solid fw-border-color-base
+	&-right
+		border-right 1px solid fw-border-color-base
+
+.fw-border-large
+	border 3px solid fw-border-color-base
+	&-top
+		border-top 3px solid fw-border-color-base
+	&-bottom
+		border-bottom 3px solid fw-border-color-base
+	&-left
+		border-left 3px solid fw-border-color-base
+	&-right
+		border-right 3px solid fw-border-color-base
+
+.fw-border-extra-large
+	border 5px solid fw-border-color-base
+	&-top
+		border-top 5px solid fw-border-color-base
+	&-bottom
+		border-bottom 5px solid fw-border-color-base
+	&-left
+		border-left 5px solid fw-border-color-base
+	&-right
+		border-right 5px solid fw-border-color-base
+
+.fw-responsive-width
+	max-width: 100%;
+	height: auto;
+
+.fw-responsive-height
+	max-height: 100%;
+	width: auto;
+
+.fw-btn
+	&-custom-color
+		background fw-btn-bg-color
+		border 1px solid fw-btn-border-color
+		color fw-btn-text-color
+		font-size fw-font-size-base
+		&:hover
+		&:focus
+		&:active
+			// background fw-btn-bg-hover-color
+			// border 1px solid fw-btn-border-hover-color
+			// color fw-btn-text-hover-color
+			background darken(fw-btn-bg-color, 20%)
+			border 1px solid darken(fw-btn-border-color, 20%)
+			color fw-btn-text-color
+
+.fw-color
+	color fw-font-color-base
+	&-dark
+		color darken(fw-font-color-base, 30%)
+	&-light
+		color lighten(fw-font-color-base, 30%)
+
+.fw-color-custom
+	color fw-font-color-custom
+	&-dark
+		color darken(fw-font-color-custom, 30%)
+	&-light
+		color lighten(fw-font-color-custom, 30%)
+.fw-background
+	background: fw-background
+	&-custom
+		background: fw-background-custom
+
+.fw-font-small
+	font-size fw-font-size-base*0.85
+
+.fw-scrollable-text /*Нужно ли???*/
+	height fw-text-scroll-height
+	overflow-y auto
+
+.fw-scrollable-box /*Нужно ли???*/
+	height fw-box-scroll-height
+	overflow auto
+
+// .fw-article
+// 	&-title
+// 	&-meta
+// 	&-lead
+// 	p
+// 	&-divider
+// 	&-blockquote - хедер
+
+
+// .fw-comment
+// 	&-header
+// 	&-avatar
+// 	&-title
+// 	&-meta
+// 	&-body
+
+// .fw-overflow-container
+
+// .fw-height-1-1
+
+// .fw-visible-hover
+
+// .fw-paginaton
+
+// .fw-list /*stripped, active*/
+
+// .fw-alert
+
+// .fw-overlay /*при наведении на картинки*/
+
+// .fw-nav /* Делать свои?*/
+
+// .fw-link

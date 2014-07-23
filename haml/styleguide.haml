@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+%html
+   %head
+      %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      %meta(charset="utf-8")
+      %meta(name="viewport" content="width=device-width, initial-scale=1")
+      %link(href="css/sprite.min.css" rel="stylesheet")
+      %link(href="css/bootstrap.min.css" rel="stylesheet")
+      %link(href="css/main.min.css" rel="stylesheet")
+      %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+      -# %script(src="js/libraries/owl.carousel.min.js")
+      -# %script(src="js/libraries/imagesloaded.min.js")
+      -# %script(src="js/libraries/jquery-imagefill.js")
+      %script(src="js/scripts.min.js")
+      %title MTG
+
+   %body
+      .container
+         %table.table.table-hover.table-bordered.table-condensed
+            %thead
+               %tr
+                  %th Nr
+                  %th.text-uppercase name
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+                  %th.text-uppercase descr
+            %tbody
+               %tr
+                  %td 1
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td.danger Helena danger
+                  %td Helena
+               %tr
+                  %td.active Helena active
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Very beautiful
+                  %td Helena
+               %tr
+                  %td Helenaa
+                  %td Helenaa
+                  %td Helenaa
+                  %td.success Helena success
+                  %td.success Helena success
+                  %td Very beautiful
+               %tr
+                  %td.info 1 info
+                  %td Helena
+                  %td Helena
+                  %td Helena
+                  %td Helena
+                  %td.warning Helena warning
+         .row
+            .col-md-4
+               %img.img-rounded(src="http://placehold.it/50x150")
+            .col-md-4
+               %img.img-circle(src="http://placehold.it/50x50")
+            .col-md-4
+               %img.img-thumbnail(src="http://placehold.it/150x100")
+         .row.well
+            .center-block.col-md-3 Center
+         .row.well
+            .center-block Center
+         .row.well
+            .col-md-5.show show
+            .col-md-7.sr-only.sr-only-focusable hide
+         %button.close
+            %span(aria-hidden="true") &times;
+            %span.sr-only Close
+         %span.caret
+         %form.form-horizontal
+            .form-group.has-success
+               %label.col-sm-4 Label 1
+               .col-sm-8
+                  %input.form-control(placeholder="INPUT" disabled="true")
+            .form-group.has-warning.has-feedback
+               %label.control-label Label 1
+               %input.form-control.input-lg
+            .form-group.has-success.has-feedback
+               %label Label 1
+               %select.form-control input
+                  %option 1
+                  %option 2
+                  %option 3
+                  %option 4
+               %select.form-control
+                  %option 1
+                  %option 2
+                  %option 3
+                  %option 4
+            .form-group.sr-only.sr-only-focusable
+               %label Label 1
+               %input.form-control input
+            .checkbox
+               %label
+                  %input(type="checkbox")
+                  Check me
+            %button.btn.btn-default Submit
+         .row
+            .col-md-3
+               %button.btn.btn-success.btn-block succes
+            .col-md-offset-6.col-md-3
+               %button.btn.btn-primary.text-uppercase.btn-block primary
+         %a.btn.btn-default.btn-lg.text-uppercase
+            %span.glyphicon.glyphicon-send.text-warning
+            info a link
+         %button.btn.btn-warning.text-uppercase.btn-block(disabled="disabled") Warning
+         %button.btn.btn-danger.btn-sm
+            Danger
+         %button.btn.fw-btn-custom-color
+            custom
+         .fw-vertical-align.fw-margin-top.fw-rounded-large.well
+            .fw-vertical-align-bottom
+               VERTICAL ALIGN
+         .row
+            .col-lg-6
+               .input-group
+                  %span.input-group-btn
+                     %button.btn.btn-info Hop hei la la lei!
+               %input.form-control
+         %button.btn.btn-link link
+         %span.glyphicon.glyphicon-search
+         .btn-group
+            %button.btn.btn-default Left
+            %button.btn.btn-default middle
+            %button.btn.btn-default right
+         .row
+            .col-xs-6.col-sm-4.well.visible-sm-block.text-overflow-hidden test 1 test 1 test 1 test 1 test 1 test 1 test 1 test 1 test 1
+            .col-xs-6.col-sm-4.well test 2
+            .clearfix.visible-xs-block
+            .col-xs-6.col-sm-4.well test 3
+            .clearfix.hidden-xs
+            .col-xs-6.col-sm-4.well test 4
+         .row
+            .col-md-4.well test 1
+               .row
+                  .col-md-6.well test test 11
+                  .col-md-6.well test test 12
+            .col-md-4.well.col-md-offset-4 test 2
+         .row
+            .col-md-9.col-md-push-3.well test 1 float-left
+            .col-md-3.col-md-pull-9.well test 2
+         %h1 This is h1
+            %small small
+         %h2 This is h2
+            %small.text-hide small
+         %h3 This is h3
+            %small small
+         %h4 This is h4
+            .small small
+         %h5 This is h5
+         %h6 This is h6
+         %p.lead This is lead
+            %u  paragraph
+         %p This is
+            %mark paragraph
+            %abbr.initialism(title="attribute") attr
+            is djfskldjfj
+         %blockquote lala ala la
+         %blockquote
+            %p trataratata ratsyrrt
+            %footer lallaa ladfdf
+               %cite My name is
+         %ul
+            %li.list-unstyled test 1
+            %li.list-unstyled test 2
+            %li.list-unstyled test 1
+            %ul
+               %li
+                  test podtest
+               %li.list-unstyled test podtest 21
+
+
