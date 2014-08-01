@@ -1,0 +1,84 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+*/
+$esport-icon_x = 0px;
+$esport-icon_y = 0px;
+$esport-icon_offset_x = 0px;
+$esport-icon_offset_y = 0px;
+$esport-icon_width = 12px;
+$esport-icon_height = 12px;
+$esport-icon_total_width = 36px;
+$esport-icon_total_height = 127px;
+$esport-icon_image = 'sprite.png';
+$esport-icon = 0px 0px 0px 0px 12px 12px 36px 127px 'sprite.png';
+$facebook-grey-icon1_x = 0px;
+$facebook-grey-icon1_y = 90px;
+$facebook-grey-icon1_offset_x = 0px;
+$facebook-grey-icon1_offset_y = -90px;
+$facebook-grey-icon1_width = 36px;
+$facebook-grey-icon1_height = 37px;
+$facebook-grey-icon1_total_width = 36px;
+$facebook-grey-icon1_total_height = 127px;
+$facebook-grey-icon1_image = 'sprite.png';
+$facebook-grey-icon1 = 0px 90px 0px -90px 36px 37px 36px 127px 'sprite.png';
+$support-icon_x = 0px;
+$support-icon_y = 22px;
+$support-icon_offset_x = 0px;
+$support-icon_offset_y = -22px;
+$support-icon_width = 13px;
+$support-icon_height = 12px;
+$support-icon_total_width = 36px;
+$support-icon_total_height = 127px;
+$support-icon_image = 'sprite.png';
+$support-icon = 0px 22px 0px -22px 13px 12px 36px 127px 'sprite.png';
+$twitter-grey-icon_x = 0px;
+$twitter-grey-icon_y = 44px;
+$twitter-grey-icon_offset_x = 0px;
+$twitter-grey-icon_offset_y = -44px;
+$twitter-grey-icon_width = 36px;
+$twitter-grey-icon_height = 36px;
+$twitter-grey-icon_total_width = 36px;
+$twitter-grey-icon_total_height = 127px;
+$twitter-grey-icon_image = 'sprite.png';
+$twitter-grey-icon = 0px 44px 0px -44px 36px 36px 36px 127px 'sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
